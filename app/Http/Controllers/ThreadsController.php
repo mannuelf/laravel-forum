@@ -14,7 +14,8 @@ class ThreadsController extends Controller
      */
     public function index()
     {
-        //
+        $threads= Thread::latest()->get();
+        return view('threads.index', compact('threads'));
     }
 
     /**
@@ -46,7 +47,9 @@ class ThreadsController extends Controller
      */
     public function show(Thread $thread)
     {
-        //
+        // using route model binding, thread should be equal to the associated thread
+        // return $thread; // uncomment to test
+        return view('threads.show', compact('thread'));
     }
 
     /**
