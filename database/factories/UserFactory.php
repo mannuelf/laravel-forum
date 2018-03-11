@@ -43,3 +43,4 @@ $factory->define(App\Reply::class, function ($faker) {
         'body' => $faker->paragraph
     ];
 });
+
