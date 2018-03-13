@@ -15,13 +15,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             @foreach ($thread->replies as $reply)
-                {{ dump($reply->title) }}
                 <div class="card">
                     <div class="card-header">
-                        {{ $reply->owners->name }} said {{ $reply->created_at->diffForHumans() }}
+                        {{ dump($reply->created_at) }}
+                        {{--{{ $reply->owners->name }} said {{ $reply->created_at->diffForHumans() }}--}}
                     </div>
                     <div class="card-body">
-                        {{ $reply->body }}
+                        {{--{{ $reply->body }}--}}
                     </div>
                 </div>
             @endforeach
